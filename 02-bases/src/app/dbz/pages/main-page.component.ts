@@ -18,7 +18,12 @@ public characters: Character[] = [{
 },
 {
   name: 'Vegeta',
-  power: 7500
+  power: 7500,
 }];
+
+onNewCharacter(character: Character):void{
+  console.log('MainPage');
+  console.log(character);
+}
 
 }

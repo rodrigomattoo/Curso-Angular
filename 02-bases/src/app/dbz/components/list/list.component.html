@@ -6,7 +6,11 @@
      let isLast = last
      let isEven = even
      let isOdd = odd"
-         class="list-group-item">//isEven = even-> para saber si es par.isOdd -> para saber si es impar
+         class="list-group-item"
+         [ngClass]="{
+          'list-group-item-dark':isLast,
+          'list-group-item-primary':isEven
+        }">
          <span class="text-primary">{{i+1}}.</span>
          <span>{{character.name}} - </span>
          <strong>Power: </strong>

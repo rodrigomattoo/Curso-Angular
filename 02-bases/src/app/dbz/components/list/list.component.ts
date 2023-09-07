@@ -8,7 +8,7 @@ import { Character } from '../../interfaces/character.interface';
 })
 export class ListComponent {
 
-  @Input()
+  @Input()//-> Indicamos a angular que este componente puede recibir una property
   public characterList: Character[] = [{
     name: 'Trunks',
     power: 10
