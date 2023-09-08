@@ -9,7 +9,7 @@ import { Character } from '../../interfaces/character.interface';
 export class ListComponent {
 
   @Output()
-  public onDeleted: EventEmitter<number> = new EventEmitter();
+  public onDeleted: EventEmitter<string> = new EventEmitter();
 
   @Input()//-> Indicamos a angular que este componente puede recibir una property
   public characterList: Character[] = [{
@@ -17,9 +17,10 @@ export class ListComponent {
     power: 10
   }];
 
- onDeleteCharacter(index: number):void{
+ deleteCharacterById(id?: string):void{
     //TODO: Emitir el ID del personaje
-    this.onDeleted.emit(index);
+    if(!id) return;
+    this.onDeleted.emit(id);
   }
 
 }
